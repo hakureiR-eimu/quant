@@ -5,7 +5,11 @@ def get_stock_day_lines(symbol):
     :param symbol: 股票代码，如 "000001"
     """
     try:
-        df = ak.stock_zh_a_hist(symbol=symbol, period="daily", start_date="20200101",adjust="qfq")
+        df = ak.stock_zh_a_hist(symbol=symbol, 
+                                period="daily",
+                                start_date="20240101",
+                                adjust="qfq")
+        # print(df)
         return df
     except Exception as e:
         print(f"获取 {symbol} 数据失败: {e}")
@@ -17,7 +21,10 @@ def get_stock_week_lines(symbol):
     :param symbol: 股票代码，如 "000001"
     """
     try:
-        df = ak.stock_zh_a_hist(symbol=symbol, period="weekly", start_date="20200101",adjust="qfq")
+        df = ak.stock_zh_a_hist(symbol=symbol,
+                                period="weekly",
+                                start_date="20220101",
+                                adjust="qfq")
         return df
     except Exception as e:
         print(f"获取 {symbol} 数据失败: {e}")

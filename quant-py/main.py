@@ -4,7 +4,7 @@
 from datetime import datetime
 import schedule
 import time
-
+import os
 from biz.scan import run as scan_run
 
 class QuantPlatform:
