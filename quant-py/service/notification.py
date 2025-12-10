@@ -30,9 +30,9 @@ class EmailNotifier:
         try:
             # 创建邮件对象
             message = MIMEMultipart()
-            message['From'] = f"量化交易助手 <{self.sender}>"
-            message['To'] = ','.join(self.receivers)
-            message['Subject'] = subject
+            message['From'] = self.sender
+            message['To'] = self.receivers[0]
+            message['Subject'] = "量化通知"
             
             # 添加邮件正文
             message.attach(MIMEText(content, 'plain', 'utf-8'))
